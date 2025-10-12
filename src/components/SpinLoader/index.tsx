@@ -1,7 +1,11 @@
-export function SpinLoader() {
+type SpinLoaderProps = {
+  containerClasses?: string;
+};
+
+export function SpinLoader({ containerClasses = '' }: SpinLoaderProps) {
   return (
-    <div className='flex items-center justify-center bg-amber-500 h-[500px]'>
-      <div className="w-10 h-10 bg-red-500 rounded-full items-center justify-center flex animate-spin">test</div>
+    <div className={`flex items-center justify-center ${containerClasses}`}>
+      <div className='w-10 h-10 border-5 border-t-transparent border-slate-900 rounded-full animate-spin' />
     </div>
   );
 }
