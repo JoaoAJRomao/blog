@@ -6,6 +6,7 @@
   "terminal.integrated.fontSize": 14,
   "editor.glyphMargin": false,
   "workbench.activityBar.location": "hidden",
+  "workbench.editor.enablePreview": false,
   "editor.lineNumbers": "on",
   // Formatação e Lint
   "editor.defaultFormatter": "esbenp.prettier-vscode",
