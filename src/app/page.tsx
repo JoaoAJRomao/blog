@@ -11,9 +11,9 @@ export default async function HomePage() {
     <Container>
       <Header />
       <section className='grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group'>
-        <Link href='#' className='w-full h-full overflow-hidden rounded-xl'>
+        <Link href='#' className='w-full h-full overflow-hidden rounded-xl group'>
           <Image
-            className='group-hover:scale-115 transition-transform duration-500'
+            className='w-full h-full object-cover group-hover:scale-115 transition-transform duration-500'
             src='/images/bryen_0.png'
             width={1200}
             height={720}
@@ -21,17 +21,17 @@ export default async function HomePage() {
             priority
           />
         </Link>
-        <div className='flex flex-col gap-4'>
-          <time className='text-slate-600 block text-sm/tight' dateTime='2025'>20/04/2025 10:00</time>
+        <div className='flex flex-col gap-4 sm:justify-center'>
+          <time className='text-slate-600 block text-sm/tight' dateTime='2025'>
+            20/04/2025 10:00
+          </time>
           <h1 className='text-2xl/tight font-extrabold'>
-            <Link  href='#'>Lorem ipsum dolor sit amet</Link>
+            <Link href='#'>Lorem ipsum dolor sit amet</Link>
           </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod blandit ante non malesuada. Nunc
             congue urna id laoreet tempor. Nunc rhoncus nec ante eu dapibus. Sed egestas neque vel vehicula ullamcorper.
-            Phasellus quis accumsan turpis, et condimentum nibh. Sed dignissim diam ex, consectetur aliquet lectus
-            feugiat a. Etiam tempor varius massa, sed suscipit nulla. Pellentesque orci est, porta a massa ac, pretium
-            pulvinar mi. Praesent ac placerat leo, tempus hendrerit ipsum. Phasellus felis ex, blandit et nibh at,
+            Phasellus quis accumsan turpis, et condimentum nibh. 
             tincidunt gravida est.
           </p>
         </div>
