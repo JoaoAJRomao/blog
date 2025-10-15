@@ -9,7 +9,7 @@ type PostHeadingProps = {
 export function PostHeading({ children, url, as: Tag = 'h2' }: PostHeadingProps) {
   const headingClassesMap = {
     h1: 'text-2xl/tight sm:text-4xl',
-    h2: 'text-2xl/tight bg-red-500 sm:text-4xl',
+    h2: 'text-2xl/tight sm:text-4xl',
   };
   const commonClasses = 'font-extrabold';
   return (
