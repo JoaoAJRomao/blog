@@ -6,13 +6,13 @@ import { readFile } from 'fs/promises';
 const ROOT_DIR = process.cwd();
 const JSON_POST_FILE_PATH = resolve(ROOT_DIR, 'src', 'db', 'seed', 'post.json');
 
-const SIMULATE_WAIT_IN_MS = 0;
+const SIMULATE_WAIT_IN_MS = 2500;
 
 export class JsonPostRepository implements PostRepository {
   private async simulateWait(): Promise<void> {
     if (SIMULATE_WAIT_IN_MS <= 0) return;
 
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       setTimeout(() => {
         resolve();
       }, SIMULATE_WAIT_IN_MS);
