@@ -10,6 +10,3 @@ export function formatRelativeDate(rawDate: string): string {
   const date = new Date(rawDate);
   return formatDistanceToNow(date, { locale: ptBR, addSuffix: true });
 }
-
-console.log(new Date().toISOString());
-console.log(formatRelativeDate('2025-10-16T04:00:09.362Z'));
