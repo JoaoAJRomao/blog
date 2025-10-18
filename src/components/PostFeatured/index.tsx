@@ -1,22 +1,28 @@
 import { PostCoverImage } from '../PostCoverImage';
 import { PostSummary } from '../PostSummary';
+import { findAllPublicPosts } from '@/lib/post/queries';
 
-export function PostFeatured() {
-  const slug = '';
-  const postLink = `/post/${slug}`;
+export async function PostFeatured() {
+  const post = (await findAllPublicPosts())[0];
+
+  if (!post) {
+    throw new Error('Post do topo não encontrado');
+  }
+
+  const postLink = `/post/${post.slug}`;
   return (
     <section className='grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group'>
       <PostCoverImage
         linkProps={{ href: postLink }}
-        imageProps={{ width: 1200, height: 720, src: '/images/bryen_9.png', alt: 'Título do post', priority: true }}
+        imageProps={{ width: 1200, height: 720, src: post.coverImageUrl, alt: post.title, priority: true }}
       />
 
       <PostSummary
-        createdAt='2025-04-05T00:24:38.616Z'
+        createdAt={post.createdAt}
         postHeading='h1'
-        excerpt='Muitas empresas e desenvolvedores individuais escolhem o Next.js justamente porque ele consegue unir simplicidade com recursos avançados.'
+        excerpt={post.excerpt}
         postLink={postLink}
-        title='Como a escrita pode mudar sua carreira'
+        title={post.title}
       />
     </section>
   );
