@@ -1,9 +1,9 @@
 import { PostCoverImage } from '../PostCoverImage';
 import { PostSummary } from '../PostSummary';
-import { findAllPublicPosts } from '@/lib/post/queries';
+import { findAllPublicPostsCached } from '@/lib/post/queries';
 
 export async function PostFeatured() {
-  const post = (await findAllPublicPosts())[0];
+  const post = (await findAllPublicPostsCached())[0];
 
   if (!post) {
     throw new Error('Post do topo não encontrado');
