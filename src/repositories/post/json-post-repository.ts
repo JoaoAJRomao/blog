@@ -27,7 +27,6 @@ export class JsonPostRepository implements PostRepository {
 
   async findAllPublic(): Promise<PostModel[]> {
     await this.simulateWait();
-    console.log('\n', 'findAllPublic', '\n');
     return (await this.readFromDisk()).filter(post => post.published);
   }
 
