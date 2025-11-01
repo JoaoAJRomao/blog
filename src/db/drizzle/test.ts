@@ -1,9 +1,9 @@
-import { drizzleDb } from "."
-import { postsTable } from "./schemas"
+// import { drizzleDb } from "."
+// import { postsTable } from "./schemas"
 
-(async () => {
-  const posts = await drizzleDb.select().from(postsTable);
-  posts.forEach(post => {
-    console.log(post.title);
-  })
-})();
+// (async () => {
+//   const posts = await drizzleDb.select().from(postsTable);
+//   posts.forEach(post => {
+//     console.log(post.title);
+//   })
+// })();
